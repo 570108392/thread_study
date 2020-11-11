@@ -13,6 +13,7 @@ public class MyRunable implements Runnable {
         }
     }
     public static void main(String[] args) {
+
         new Thread(new MyRunable()).start();
 
         for (int i =0; i< 100;i++){
