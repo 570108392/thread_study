@@ -22,10 +22,11 @@ public class MyFixedThreadPool {
      * @param args
      */
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
         for (int i = 0; i< 100; i++){
             executorService.execute(new MyRunable());
         }
+        executorService.shutdown();
     }
 
     static class MyRunable implements Runnable {
@@ -33,7 +34,7 @@ public class MyFixedThreadPool {
         @Override
         public void run() {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
