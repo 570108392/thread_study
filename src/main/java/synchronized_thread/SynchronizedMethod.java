@@ -1,9 +1,13 @@
+package synchronized_thread;
+
+import java.util.concurrent.CountDownLatch;
+
 /**
  * @createUser: 张鹏
  * @createTime: 2020/11/12
  * @descripton:
  *
- * SynchronizedMethod 同步方法
+ * synchronized_thread.SynchronizedMethod 同步方法
  *      非静态方法：默认锁为对象this
  *      静态方法：默认锁为对象SynchronizedMethod.class
  **/
